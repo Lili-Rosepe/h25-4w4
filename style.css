@@ -75,7 +75,7 @@ h6 {
   padding: 10vh 5vw;
 }
 
-hero {
-  background-image: url("images/maldives.jpg");
+.hero {
+  background-image: url(images/maldives.jpg);
   min-height: 100vh;
 }/*# sourceMappingURL=style.css.map */
