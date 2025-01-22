@@ -1,0 +1,48 @@
+/*
+Theme Name: Tp1 Lili-Rose Perreault
+Theme URI: https://wordpress.org/themes/twentytwenty/
+Author: Lili-Rose Perreault
+Author URI: https://github.com/Lili-Rosepe
+Description:  thème développé dans le cadres du cours 4w4
+
+Version: 1.0
+Requires at least: 6.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentytwenty
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+// //////////////////////////////////////////
+// ´fichier principale de la structure sass
+// //////////////////////////////////////
+
+// /////////////
+// les variables
+// ///////////////
+
+@import "variables/couleur";
+
+
+// /////////////////
+// Règle de base
+// //////////////////
+
+@import "bases/liens";
+@import "bases/simple";
+
+// /////////////////
+// Composant
+// //////////////////
+@import "composants/menu";
+
+
+// /////////////////
+// Layout
+// //////////////////
+@import "layout/entete";
+@import "layout/general";
+@import "layout/galerie";
+@import "layout/hero";
