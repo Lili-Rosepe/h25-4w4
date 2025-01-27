@@ -53,21 +53,27 @@ h6 {
   font-size: clamp(0.8rem, 1.7vw, 1.2rem);
 }
 
-.menu ul {
-  margin: 0;
-  padding: 0;
+/* ----------------------------------------- .menu */
+.menu {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 10px 0;
 }
-.menu ul li {
-  display: inline-block;
-}
-.menu ul li a {
-  color: #333;
+.menu__li a {
   text-decoration: none;
+  padding: 4px;
 }
 
 .entete {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.entete__navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .global {
@@ -76,6 +82,6 @@ h6 {
 }
 
 .hero {
-  background-image: url(images/maldives.jpg);
+  background-image: url("images/maldives.jpg");
   min-height: 100vh;
 }/*# sourceMappingURL=style.css.map */
