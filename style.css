@@ -56,29 +56,88 @@ h6 {
 /* ----------------------------------------- .menu */
 .menu {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   list-style-type: none;
   gap: 10px 0;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    flex-direction: column;
+  }
 }
 .menu__li a {
   text-decoration: none;
   padding: 4px;
 }
 
+.recherche {
+  display: flex;
+  height: 1.6rem;
+  width: 14rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.recherche__input {
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.01);
+  flex: 1 0 auto;
+  padding: 3px;
+}
+.recherche__input:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.recherche__input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+  font-style: italic;
+}
+.recherche__img {
+  flex: 0 0 20px;
+  padding: 3px;
+}
+
 .entete {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: static;
+  flex-direction: row;
+  background-color: transparent;
 }
 .entete__navigation {
   display: flex;
-  flex-direction: column;
+  max-width: 100%;
+  flex-direction: row;
   align-items: center;
+}
+@media screen and (max-width: 880px) {
+  .entete__navigation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    padding: 20px;
+    flex-direction: column;
+    width: 100vw;
+  }
+}
+.entete__logo img {
+  width: 50%;
 }
 
 .global {
   max-width: 1100px;
   padding: 10vh 5vw;
+}
+
+.galerie {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.galerie img {
+  width: 50%;
+  max-width: 100%;
 }
 
 .hero {
