@@ -134,10 +134,15 @@ h6 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
 }
-.galerie img {
-  width: 50%;
-  max-width: 100%;
+.galerie .galerie__figure {
+  flex: 1 0 auto;
+  padding: 0;
+  margin: 0;
+}
+.galerie .galerie__figure img {
+  width: 250px;
 }
 
 .hero {
