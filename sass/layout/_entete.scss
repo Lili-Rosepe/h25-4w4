@@ -4,8 +4,29 @@
     align-items: center;
     &__navigation {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-                                                                   
+        max-width: 100%;
+        flex-direction: row;
+        align-items: center;   
+        
+        @media screen and (max-width:880px){
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: white;
+            padding: 20px;
+            flex-direction: column;
+            width: 100vw;
+
+        }                                                        
+    }
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+    &__logo {
+        img{
+            
+            width: 50%;
+           
+        }                                                          
     }
 }
