@@ -33,6 +33,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        transform: translateX(0);
+        transition: transform 0.3s ease-in-out;
   
         .menu {
           display: flex;
@@ -71,7 +73,8 @@
         .entete__menu {
             display: none;
             width: 100%;
-
+            transform: translateX(100%);  // Menu caché à droite de l'écran
+            
         
         } 
         // Cacher le logo sur petit écran et le mettre au-dessus du menu
@@ -79,6 +82,7 @@
             display: flex;
             justify-content: flex-start;
             position: absolute;
+            z-index: 20;
             top: 20px;
             left: 20px;
 
@@ -93,7 +97,7 @@
             align-items: center;
             padding: 20px 0;
             transform: translateX(0);
-            transition: transform 0.3s ease-in-out;
+            
         }
 
     }

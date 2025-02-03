@@ -130,6 +130,8 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
 }
 .entete__navigation .entete__menu .menu {
   display: flex;
@@ -164,11 +166,13 @@ h6 {
   .entete__navigation .entete__menu {
     display: none;
     width: 100%;
+    transform: translateX(100%);
   }
   .entete__navigation .entete__logo {
     display: flex;
     justify-content: flex-start;
     position: absolute;
+    z-index: 20;
     top: 20px;
     left: 20px;
   }
@@ -181,7 +185,6 @@ h6 {
     align-items: center;
     padding: 20px 0;
     transform: translateX(0);
-    transition: transform 0.3s ease-in-out;
   }
 }
 .entete__logo img {
@@ -212,4 +215,31 @@ h6 {
 .hero {
   background-image: url("images/maldives.jpg");
   min-height: 100vh;
+}
+.hero__btn {
+  background-color: rgb(146, 203, 175);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formulaire {
+  background-color: rgb(248, 218, 218);
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  margin: 0px;
+}
+.formulaire__contenu {
+  justify-content: center;
+}
+.formulaire__contenu form {
+  display: flex;
+  flex-direction: row;
+}
+.formulaire__champ input {
+  border: 2px solid #57e6eb;
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */
