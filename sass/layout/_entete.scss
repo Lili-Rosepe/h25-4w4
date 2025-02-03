@@ -2,11 +2,55 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     &__navigation {
         display: flex;
         max-width: 100%;
         flex-direction: row;
-        align-items: center;   
+        align-items: center; 
+        
+        
+         // Menu hamburger pour petit écran
+    .menu-toggle {
+        display: none;  // Cacher l'input de type checkbox
+      }
+      // Icône du hamburger
+    .menu-icon {
+        display: none;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px;
+  
+        .bar {
+          width: 40px;
+          height: 5px;
+          background-color: #000000;
+          border-radius: 5px;
+        }
+      }
+      .entete__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+  
+        .menu {
+          display: flex;
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          
+          .menu__li {
+            margin-left: 20px;
+            
+            a {
+              text-decoration: none;
+              color: green;
+              font-size: 18px;
+                }
+            }
+         }
+        }
         
         @media screen and (max-width:880px){
             position: absolute;
@@ -16,16 +60,52 @@
             padding: 20px;
             flex-direction: column;
             width: 100vw;
+            // Afficher l'icône du hamburger
+            .menu-icon {
+            display: flex;
+            position: absolute; // Positionner l'icône en haut à droite
+            top: 20px;
+            right: 20px;
+            }    
+            // Menu masqué par défaut
+        .entete__menu {
+            display: none;
+            width: 100%;
 
-        }                                                        
+        
+        } 
+        // Cacher le logo sur petit écran et le mettre au-dessus du menu
+        .entete__logo {
+            display: flex;
+            justify-content: flex-start;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+
+            img {
+            width: 40%;
+            }
+        }
+        // Si la checkbox est cochée (menu ouvert)
+        .menu-toggle:checked + .menu-icon + .entete__menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            transform: translateX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
     }
+                                             
+}
     position: static;
     flex-direction: row;
     background-color: transparent;
     &__logo {
         img{
             
-            width: 50%;
+            width: 40%;
            
         }                                                          
     }
