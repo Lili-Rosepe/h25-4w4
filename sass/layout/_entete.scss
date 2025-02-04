@@ -33,8 +33,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        transform: translateX(0);
-        transition: transform 0.3s ease-in-out;
+        
+        
   
         .menu {
           display: flex;
@@ -73,33 +73,28 @@
         .entete__menu {
             display: none;
             width: 100%;
-            transform: translateX(100%);  // Menu caché à droite de l'écran
-            
         
         } 
         // Cacher le logo sur petit écran et le mettre au-dessus du menu
         .entete__logo {
-            display: flex;
-            justify-content: flex-start;
             position: absolute;
-            z-index: 20;
-            top: 20px;
-            left: 20px;
-
+            z-index: 99;
             img {
-            width: 40%;
+            width: 30%;
             }
         }
         // Si la checkbox est cochée (menu ouvert)
-        .menu-toggle:checked + .menu-icon + .entete__menu {
+        .menu-toggle:checked + .menu-icon  + .entete__menu {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px 0;
-            transform: translateX(0);
+            
             
         }
-
+        .recherche{
+            display: none;
+        }
     }
                                              
 }
@@ -108,8 +103,8 @@
     background-color: transparent;
     &__logo {
         img{
-            
             width: 40%;
+            z-index: 55;
            
         }                                                          
     }

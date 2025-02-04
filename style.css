@@ -130,8 +130,6 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transform: translateX(0);
-  transition: transform 0.3s ease-in-out;
 }
 .entete__navigation .entete__menu .menu {
   display: flex;
@@ -166,29 +164,27 @@ h6 {
   .entete__navigation .entete__menu {
     display: none;
     width: 100%;
-    transform: translateX(100%);
   }
   .entete__navigation .entete__logo {
-    display: flex;
-    justify-content: flex-start;
     position: absolute;
-    z-index: 20;
-    top: 20px;
-    left: 20px;
+    z-index: 99;
   }
   .entete__navigation .entete__logo img {
-    width: 40%;
+    width: 30%;
   }
   .entete__navigation .menu-toggle:checked + .menu-icon + .entete__menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
-    transform: translateX(0);
+  }
+  .entete__navigation .recherche {
+    display: none;
   }
 }
 .entete__logo img {
   width: 40%;
+  z-index: 55;
 }
 
 .global {
