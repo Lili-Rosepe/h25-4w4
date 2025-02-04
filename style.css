@@ -60,7 +60,7 @@ h6 {
   list-style-type: none;
   gap: 10px 0;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 880px) {
   .menu {
     flex-direction: column;
   }
@@ -105,10 +105,7 @@ h6 {
   background-color: transparent;
 }
 .entete__navigation {
-  display: flex;
   max-width: 100%;
-  flex-direction: row;
-  align-items: center;
 }
 .entete__navigation .menu-toggle {
   display: none;
@@ -147,44 +144,40 @@ h6 {
 }
 @media screen and (max-width: 880px) {
   .entete__navigation {
-    position: absolute;
-    top: 0;
-    right: 0;
     background-color: white;
     padding: 20px;
-    flex-direction: column;
     width: 100vw;
   }
   .entete__navigation .menu-icon {
     display: flex;
+    align-items: flex-end;
+    max-width: 50%;
+    right: 0;
+    top: 10px;
     position: absolute;
-    top: 20px;
-    right: 20px;
   }
   .entete__navigation .entete__menu {
     display: none;
     width: 100%;
   }
   .entete__navigation .entete__logo {
-    position: absolute;
+    align-self: flex-start;
     z-index: 99;
-  }
-  .entete__navigation .entete__logo img {
-    width: 30%;
+    margin: 0;
+    max-width: 20%;
   }
   .entete__navigation .menu-toggle:checked + .menu-icon + .entete__menu {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-content: center;
     padding: 20px 0;
   }
   .entete__navigation .recherche {
     display: none;
   }
 }
-.entete__logo img {
-  width: 40%;
-  z-index: 55;
+.entete .entete__logo img {
+  width: 20%;
 }
 
 .global {

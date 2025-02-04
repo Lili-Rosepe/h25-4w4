@@ -4,10 +4,9 @@
     align-items: center;
     position: relative;
     &__navigation {
-        display: flex;
+
         max-width: 100%;
-        flex-direction: row;
-        align-items: center; 
+
         
         
          // Menu hamburger pour petit écran
@@ -33,9 +32,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
-        
-  
+
         .menu {
           display: flex;
           list-style-type: none;
@@ -55,39 +52,35 @@
         }
         
         @media screen and (max-width:880px){
-            position: absolute;
-            top: 0;
-            right: 0;
             background-color: white;
             padding: 20px;
-            flex-direction: column;
             width: 100vw;
             // Afficher l'icône du hamburger
             .menu-icon {
             display: flex;
-            position: absolute; // Positionner l'icône en haut à droite
-            top: 20px;
-            right: 20px;
+            align-items: flex-end;
+            max-width: 50%;
+            right: 0;
+            top: 10px;
+            position: absolute;
             }    
             // Menu masqué par défaut
         .entete__menu {
             display: none;
             width: 100%;
-        
         } 
-        // Cacher le logo sur petit écran et le mettre au-dessus du menu
+       
         .entete__logo {
-            position: absolute;
+            align-self: flex-start;
             z-index: 99;
-            img {
-            width: 30%;
-            }
+            margin: 0;
+            max-width: 20%;
         }
         // Si la checkbox est cochée (menu ouvert)
         .menu-toggle:checked + .menu-icon  + .entete__menu {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-content: center;
             padding: 20px 0;
             
             
@@ -101,11 +94,9 @@
     position: static;
     flex-direction: row;
     background-color: transparent;
-    &__logo {
+    .entete__logo {
         img{
-            width: 40%;
-            z-index: 55;
-           
+            width: 20%;
         }                                                          
     }
 }
