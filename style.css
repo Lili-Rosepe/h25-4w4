@@ -60,7 +60,7 @@ h6 {
   list-style-type: none;
   gap: 10px 0;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 880px) {
   .menu {
     flex-direction: column;
   }
@@ -99,29 +99,85 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   position: static;
   flex-direction: row;
   background-color: transparent;
 }
 .entete__navigation {
-  display: flex;
   max-width: 100%;
-  flex-direction: row;
+}
+.entete__navigation .menu-toggle {
+  display: none;
+}
+.entete__navigation .menu-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}
+.entete__navigation .menu-icon .bar {
+  width: 40px;
+  height: 5px;
+  background-color: #000000;
+  border-radius: 5px;
+}
+.entete__navigation .entete__menu {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+.entete__navigation .entete__menu .menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.entete__navigation .entete__menu .menu .menu__li {
+  margin-left: 20px;
+}
+.entete__navigation .entete__menu .menu .menu__li a {
+  text-decoration: none;
+  color: green;
+  font-size: 18px;
 }
 @media screen and (max-width: 880px) {
   .entete__navigation {
-    position: absolute;
-    top: 0;
-    right: 0;
     background-color: white;
     padding: 20px;
-    flex-direction: column;
     width: 100vw;
   }
+  .entete__navigation .menu-icon {
+    display: flex;
+    align-items: flex-end;
+    max-width: 50%;
+    right: 0;
+    top: 10px;
+    position: absolute;
+  }
+  .entete__navigation .entete__menu {
+    display: none;
+    width: 100%;
+  }
+  .entete__navigation .entete__logo {
+    align-self: flex-start;
+    z-index: 99;
+    margin: 0;
+    max-width: 20%;
+  }
+  .entete__navigation .menu-toggle:checked + .menu-icon + .entete__menu {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 20px 0;
+  }
+  .entete__navigation .recherche {
+    display: none;
+  }
 }
-.entete__logo img {
-  width: 50%;
+.entete .entete__logo img {
+  width: 20%;
 }
 
 .global {
@@ -148,4 +204,37 @@ h6 {
 .hero {
   background-image: url("images/maldives.jpg");
   min-height: 100vh;
+}
+.hero__btn {
+  background-color: rgb(146, 203, 175);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formulaire {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  padding: 20px;
+  margin: 0px;
+  width: 75%;
+  margin: -40px;
+  box-shadow: 0 4px 8px gray;
+}
+.formulaire__contenu {
+  justify-content: center;
+}
+.formulaire__contenu form {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+.formulaire__champ input {
+  border: 2px solid #57e6eb;
+  display: flex;
+  flex-direction: column;
+  width: 12vw;
 }/*# sourceMappingURL=style.css.map */
