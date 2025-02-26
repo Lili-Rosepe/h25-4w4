@@ -20,25 +20,6 @@
         </div>
 
     </section>
-    <section class="galerie">
-        <div class="galerie global">
-            <figure class="galerie__figure">
-                <img src="" alt="" class="galerie__img">
-            </figure>
-            <figure class="galerie__figure">
-                <img src="" alt="" class="galerie__img">
-            </figure>
-            <figure class="galerie__figure">
-                <img src="" alt="" class="galerie__img">
-            </figure>
-            <figure class="galerie__figure">
-                <img src="" alt="" class="galerie__img">
-            </figure>
-            <figure class="galerie__figure">
-                <img src="" alt="" class="galerie__img">
-            </figure>
-        </div>
-    </section>
     <section class="populaire">
         <div class="global">
             <?php if (have_posts()) : while (have_posts()) : the_post(); 

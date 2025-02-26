@@ -121,6 +121,15 @@ Les layouts
   padding: 10vh 5vw;
 }
 
+.populaire {
+  display: flex;
+}
+
+.populaire .global {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .entete {
   display: flex;
   justify-content: space-between;
@@ -145,6 +154,9 @@ Les layouts
     width: 100vw;
   }
 }
+.entete__logo {
+  width: 50px;
+}
 
 .hero {
   background-image: url("images/maldives.jpg");
@@ -156,7 +168,7 @@ Les layouts
   --------------------------------- Layout du pied de page
 */
 footer {
-  background-color: rgb(236, 136, 13);
+  background-color: rgb(13, 236, 225);
   color: #000;
 }
 
