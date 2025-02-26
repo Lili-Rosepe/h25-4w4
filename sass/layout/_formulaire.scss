@@ -1,0 +1,33 @@
+.formulaire{
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  padding: 20px;
+  margin: 0px;
+  width: 75%;
+  margin: -40px;
+  box-shadow:0 4px 8px gray;
+
+  
+ 
+  
+  &__contenu{
+    justify-content: center;
+   
+    
+    form{
+      display: flex;
+      flex-direction:row ;
+      gap: 1vw;
+    }
+ 
+  }
+  &__champ input{
+    border: 2px solid #57e6eb;
+    display: flex;
+    flex-direction: column;
+    width: 12vw;
+  }
+
+}
