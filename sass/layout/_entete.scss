@@ -25,7 +25,10 @@
         align-items: center;
                                                                    
     }
-    &__logo{
-        width: 50px;
-    }
+    
+    .custom-logo {
+        max-width: 150px;
+        height: auto;
+     }  
+    
 }

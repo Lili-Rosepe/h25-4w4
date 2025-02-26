@@ -2,7 +2,7 @@
 
 ## Concevoir un site Wordpress pour un club de voyage
 
-### Auteur: Eddy Martin
+### Auteur: Lili-Rose Perreault
 
 La réalisation de ce thème permettra d'optimiser la présentation d'un contenu spécifique sur différentes destination de voyages.
 

@@ -154,8 +154,9 @@ Les layouts
     width: 100vw;
   }
 }
-.entete__logo {
-  width: 50px;
+.entete .custom-logo {
+  max-width: 150px;
+  height: auto;
 }
 
 .hero {
