@@ -6,7 +6,10 @@
     <title>Club de voyage</title>
     <!-- link rel="stylesheet" href="normalize.css" -->
     <!-- link rel="stylesheet" href="style.css" -->
-    <?php wp_head() ?>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap" rel="stylesheet">
+     <?php wp_head() ?>
 </head>
 <body>
     <header>

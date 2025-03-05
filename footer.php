@@ -17,6 +17,10 @@
                 <p>Tel: (514) 254-7131</p>
                 </div>
                 <div class="piedpage__s1__adresse__recherche">
+                <form class="recherche">
+                    <input type="search" placeholder="Rechercher" class="recherche__input">
+                    <img class="recherche__img"  src="https://s2.svgbox.net/hero-outline.svg?ic=search&color=000" width="16" height="16">
+                </form>
                     <?php get_search_form();   ?>
                 </div>
             </div>
@@ -24,8 +28,9 @@
                 <h4>Mission du club</h4>
                 <p>La mission d'un site de club de voyage est de proposer à ses membres une expérience unique en facilitant l'accès à des destinations et des offres exclusives. En offrant des conseils personnalisés, des packages sur mesure et une communauté engagée, le site permet aux voyageurs de découvrir de nouvelles horizons tout en bénéficiant d'avantages tarifaires et d'un service de qualité. L'objectif est de rendre les voyages plus accessibles, plus simples et plus enrichissants, tout en favorisant les échanges et les partages d'expériences entre passionnés de voyage.</p>
             </div>
-            <div class="piedpage__s1__icone">
 
+            <div class="piedpage__s1__icone">
+            <!-- Différent icone des média sociaux -->
             <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=000000" width="20" height="20">
                 <img src="https://s2.svgbox.net/social.svg?ic=linkedin&color=000000" width="20" height="20">
                 <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=000000" width="20" height="20">
