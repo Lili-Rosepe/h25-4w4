@@ -105,14 +105,21 @@ Les composants
   justify-content: space-between;
 }
 .carte--grande {
-  flex: 1 1 250px;
+  flex: 1 1 20%;
 }
 .carte__image img {
   width: 100%;
 }
 .carte__contenu {
-  background-color: aliceblue;
+  background-color: rgb(200, 244, 250);
 }
+.carte__description {
+  gap: 10px;
+}
+.carte__bouton--actif {
+  color: rgb(42, 70, 70);
+}
+
 /* /////////////////////////////////
 Les layouts
 //////////////////////////////////// */
