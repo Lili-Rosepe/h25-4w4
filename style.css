@@ -113,9 +113,6 @@ Les composants
 .carte__contenu {
   background-color: rgb(200, 244, 250);
 }
-.carte__description {
-  gap: 10px;
-}
 .carte__bouton--actif {
   color: rgb(42, 70, 70);
 }
@@ -170,13 +167,15 @@ Les layouts
   background-image: url("images/maldives.jpg");
   background-repeat: no-repeat;
   min-height: 100vh;
+  color: aliceblue;
+  background-size: cover;
 }
 
 /*
   --------------------------------- Layout du pied de page
 */
 footer {
-  background-color: rgb(30, 197, 189);
+  background-color: #e299d7;
   color: #000;
 }
 
