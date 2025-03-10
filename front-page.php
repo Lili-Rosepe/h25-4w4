@@ -12,7 +12,7 @@
             <?php bloginfo('admin_email'); ?>
             </p>
             <p class="hero__adresse">
-                5800 Sherbrooke-est - Montréal (Québec) H1X 2A2
+                3800 Sherbrooke-est - Montréal (Québec) H1X 2A2
             </p>
             <p class="hero_auteur">Auteur: <?php echo $hero_auteur; ?></p>
             <div class="hero__icone">

@@ -1,4 +1,7 @@
 <footer>
+    <?php $footer_adresse  = get_theme_mod('footer_adresse', 'Default Title');  ?>
+    <?php $footer_telephone  = get_theme_mod('footer_telephone', 'Default Title');  ?>
+    <?php $footer_mission  = get_theme_mod('footer_mission', 'Default Title');  ?>
     <div class="piedpage global">
         <section class="piedpage__s1">
            <div class="piedpage__s1__liens">
@@ -13,8 +16,8 @@
             <div class="piedpage__s1__adresse">
                 <div class="piedpage__s1__adresse__coord">
                     <h4>Adresse et Recherche</h4>
-                <p>3800 Sherbrooke St E, Montreal, Quebec H1X 2A2</p>
-                <p>Tel: (514) 254-7131</p>
+                <p> <?php echo $footer_adresse; ?></p>
+                <p>Tel: <?php echo $footer_telephone; ?></p>
                 </div>
                 <div class="piedpage__s1__adresse__recherche">
                 
@@ -23,7 +26,7 @@
             </div>
             <div class="piedpage__s1__description">
                 <h4>Mission du club</h4>
-                <p>La mission d'un site de club de voyage est de proposer à ses membres une expérience unique en facilitant l'accès à des destinations et des offres exclusives. En offrant des conseils personnalisés, des packages sur mesure et une communauté engagée, le site permet aux voyageurs de découvrir de nouvelles horizons tout en bénéficiant d'avantages tarifaires et d'un service de qualité. L'objectif est de rendre les voyages plus accessibles, plus simples et plus enrichissants, tout en favorisant les échanges et les partages d'expériences entre passionnés de voyage.</p>
+                <p> <?php echo $footer_mission; ?></p>
             </div>
 
             <div class="piedpage__s1__icone">

@@ -103,18 +103,31 @@ Les composants
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 3rem;
+  background-color: rgb(200, 244, 250);
 }
 .carte--grande {
-  flex: 1 1 20%;
+  flex: 1 1 30%;
+  padding: 20px;
+  border-radius: 10px;
 }
 .carte__image img {
   width: 100%;
 }
 .carte__contenu {
-  background-color: rgb(200, 244, 250);
+  background-color: rgb(253, 235, 255);
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+}
+.carte__titre {
+  color: rgb(56, 19, 59);
+}
+.carte__description {
+  color: black;
 }
 .carte__bouton--actif {
-  color: rgb(42, 70, 70);
+  color: rgb(79, 128, 128);
 }
 
 /* /////////////////////////////////
@@ -127,6 +140,7 @@ Les layouts
 
 .populaire {
   display: flex;
+  justify-self: center;
 }
 
 .populaire .global {
