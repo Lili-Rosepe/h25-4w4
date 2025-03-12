@@ -7,7 +7,7 @@
      $hero_couleur = get_theme_mod('hero_couleur', '#FFFFFF'); ?>
     <section class="hero" style="background-image: url(<?php echo $hero_background ?>)" >
         <div class="hero__contenu global">
-            <?php $hero_couleur = get_theme_mod('hero_couleur', '#FFFFFF'); ?>
+            
             <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
             <p class="hero__description">
             <?php bloginfo('description'); ?>
