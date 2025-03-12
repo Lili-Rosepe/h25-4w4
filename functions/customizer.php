@@ -17,6 +17,8 @@ $wp_customize->add_control('hero_auteur', array(
   'section' => 'hero_section',
   'type' => 'text',
 ));
+
+
 ////////////////// ajout de la donnée adresse
 $wp_customize->add_setting('hero_adresse', array(
   'default' => __('Sherbrooke MTL', 'theme_4w4'),
@@ -39,6 +41,17 @@ $wp_customize->add_control('hero_telephone', array(
   'section' => 'hero_section',
   'type' => 'text',
 ));
+////////////////////Ajouter le contrôle pour la couleur
+$wp_customize->add_setting('hero_couleur', array(
+  'default' => '#FFFFFF', 
+  'sanitize_callback' => 'sanitize_hex_color', 
+));
+
+////////////////// Ajouter le contrôle pour la couleur
+$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'hero_couleur',array(
+    'label' => __('Couleur du texte', 'theme_4w4'), 
+    'section' => 'hero_section', 
+)));
 
 /////////////// ajout de la données image en background
 $wp_customize->add_setting('hero_background', array(

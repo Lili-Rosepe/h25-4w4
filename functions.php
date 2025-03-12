@@ -1,4 +1,33 @@
 <?php
+// Chemin vers le dossier functions
+$functions_dir = get_template_directory() . '/functions/';
+
+// Liste des fichiers à inclure
+$function_files = array(
+    'customizer.php',
+    'options.php',
+    
+);
+function theme_4w4_customizer_styles() {
+  // Récupérer la couleur du texte choisie dans le customizer
+  $hero_couleur = get_theme_mod('hero_couleur', '#FFFFFF');
+  
+  ?>
+  <style type="text/css">
+      .hero {
+          color: <?php echo esc_html($hero_couleur); ?>;
+      }
+  </style>
+  <?php
+}
+add_action('wp_head', 'theme_4w4_customizer_styles');
+
+// Boucle pour inclure tous les fichiers
+foreach ($function_files as $file) {
+    include_once $functions_dir . $file;
+}
+
+
 add_action('customize_register', 'theme_4w4_customize_register');
 function mon_theme_supports() {
 
