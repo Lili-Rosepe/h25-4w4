@@ -1,0 +1,94 @@
+<?php 
+function theme_4w4_customize_register($wp_customize) {
+  // Le code pour ajouter des sections, des réglages et des contrôles ira ici.
+  // Création d'une nouveele section dans le customizer
+  $wp_customize->add_section('hero_section', array(
+    'title' => __('Section Hero', 'theme_4w4'),
+    'priority' => 30,
+));
+////////////////// ajout de la donnée de l'auteur
+$wp_customize->add_setting('hero_auteur', array(
+  'default' => __('Lili-Rose Perreault', 'theme_4w4'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+//////////////// ajout du contrôle de la donnée de l'auteur
+$wp_customize->add_control('hero_auteur', array(
+  'label' => __('Auteur', 'theme_4w4'),
+  'section' => 'hero_section',
+  'type' => 'text',
+));
+////////////////// ajout de la donnée adresse
+$wp_customize->add_setting('hero_adresse', array(
+  'default' => __('Sherbrooke MTL', 'theme_4w4'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+//////////////// ajout du contrôle de la donnée adresse
+$wp_customize->add_control('hero_adresse', array(
+  'label' => __('Adresse', 'theme_4w4'),
+  'section' => 'hero_section',
+  'type' => 'text',
+));
+////////////////// ajout de la donnée téléphone
+$wp_customize->add_setting('hero_telephone', array(
+  'default' => __('514', 'theme_4w4'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+//////////////// ajout du contrôle de la donnée téléphone
+$wp_customize->add_control('hero_telephone', array(
+  'label' => __('Téléphone', 'theme_4w4'),
+  'section' => 'hero_section',
+  'type' => 'text',
+));
+
+/////////////// ajout de la données image en background
+$wp_customize->add_setting('hero_background', array(
+  'default' => '',
+  'sanitize_callback' => 'esc_url_raw',
+));
+//////////// ajout du contrôle de la donnée background
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background', array(
+  'label' => __('Image en arrière plan', 'theme_4w4'),
+  'section' => 'hero_section',
+)));
+
+
+//////////////////////////////////////////////////////SECTION FOOTER ////////////////////////////////////////////////////////
+$wp_customize->add_section('footer_section', array(
+  'title' => __('Section Footer', 'theme_4w4'),
+  'priority' => 30,
+));
+////////////////// ajout de la donnée
+$wp_customize->add_setting('footer_adresse', array(
+  'default' => __('Sherbrooke Montréal', 'theme_4w4'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+//////////////// ajout du contrôle de la donnée
+$wp_customize->add_control('footer_adresse', array(
+  'label' => __('Adresse', 'theme_4w4'),
+  'section' => 'footer_section',
+  'type' => 'text',
+));
+////////////////// ajout de la donnée
+$wp_customize->add_setting('footer_telephone', array(
+  'default' => __('514', 'theme_4w4'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+//////////////// ajout du contrôle de la donnée
+$wp_customize->add_control('footer_telephone', array(
+  'label' => __('Telephone', 'theme_4w4'),
+  'section' => 'footer_section',
+  'type' => 'text',
+));
+////////////////// ajout de la donnée
+$wp_customize->add_setting('footer_mission', array(
+  'default' => __('En route', 'theme_4w4'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+//////////////// ajout du contrôle de la donnée
+$wp_customize->add_control('footer_mission', array(
+  'label' => __('Mission', 'theme_4w4'),
+  'section' => 'footer_section',
+  'type' => 'text',
+));
+}
+ ?>
