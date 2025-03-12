@@ -1,0 +1,27 @@
+
+<?php
+     $hero_auteur = get_theme_mod('hero_auteur', 'Default Title');
+     $hero_background = get_theme_mod('hero_background', '') ; 
+     $hero_telephone = get_theme_mod('hero_telephone', ' 5 1 4'); 
+     $hero_adresse = get_theme_mod('hero_adresse', 'Sherbrooke MTL');
+     $hero_couleur = get_theme_mod('hero_couleur', '#FFFFFF'); ?>
+    <section class="hero" style="background-image: url(<?php echo $hero_background ?>)" >
+      <div class="hero__contenu global">       
+        <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
+        <p class="hero__description">
+        <?php bloginfo('description'); ?>
+        </p>
+        <p class="hero__courriel">
+        <?php bloginfo('admin_email'); ?>
+        </p>
+        <p class="hero__adresse">
+        <?php echo $hero_telephone; ?>
+        </p>
+        <p class="hero__telephone">
+        Tel: <?php echo $hero_telephone; ?>
+        </p>
+        <p class="hero_auteur">Auteur: <?php echo $hero_auteur; ?></p>
+        <?php get_template_part('gabarits/icones-sociaux'); ?>
+
+      </div>
+    </section>
