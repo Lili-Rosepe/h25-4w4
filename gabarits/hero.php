@@ -6,7 +6,7 @@
      $hero_email = get_theme_mod('hero_email', 'Default Title');
      $hero_adresse = get_theme_mod('hero_adresse', 'Sherbrooke MTL');
      $hero_couleur = get_theme_mod('hero_couleur', '#FFFFFF'); ?>
-
+  <!-- Section hero -->
     <section class="hero" style="background-image: url(<?php echo $hero_background ?>)" >
       <div class="hero__contenu global">       
         <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
