@@ -29,8 +29,7 @@
                 )); ?>
                 
                 <form class="recherche">
-                    <input type="search" placeholder="Rechercher" class="recherche__input">
-                    <img class="recherche__img"  src="https://s2.svgbox.net/hero-outline.svg?ic=search&color=000" width="16" height="16">
+                <?php get_search_form();   ?>
                 </form>
             </div> <!-- fin entete__navigation  -->
         </div>

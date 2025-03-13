@@ -30,6 +30,17 @@ $wp_customize->add_control('hero_adresse', array(
   'section' => 'hero_section',
   'type' => 'text',
 ));
+////////////////// ajout de la donnée email
+$wp_customize->add_setting('hero_email', array(
+  'default' => __('@lili', 'theme_4w4'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+//////////////// ajout du contrôle de la donnée email
+$wp_customize->add_control('hero_email', array(
+  'label' => __('Email', 'theme_4w4'),
+  'section' => 'hero_section',
+  'type' => 'text',
+));
 ////////////////// ajout de la donnée téléphone
 $wp_customize->add_setting('hero_telephone', array(
   'default' => __('514', 'theme_4w4'),
