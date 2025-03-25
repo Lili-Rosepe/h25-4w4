@@ -1,6 +1,6 @@
 // Barre d'erreur
 .erreur_barre {
-  background-color:  rgb(200, 244, 250); // Vert naturel
+  background-color:  rgb(200, 244, 250); 
   color: rgb(255, 255, 255);
   padding: 10px;
   text-align: center;
@@ -14,9 +14,9 @@
 .erreur_404 {
   text-align: center;
   margin: 50px auto;
-  font-family: 'Georgia', serif; // Police plus élégante pour un thème nature
   color: white; 
- 
+
+ //texte 
   h1 {
     font-size: 48px;
     color:rgb(255, 255, 255); 
@@ -26,7 +26,7 @@
   h3 {
     font-size: 24px;
     margin-bottom: 30px;
-    color: rgb(155, 193, 198); // Marron pour un ton terreux
+    color: #fcc2f3;
   }
  
   .bouton_acceuil {
@@ -44,8 +44,8 @@
       transition: background-color 0.3s ease, transform 0.2s ease;
  
       &:hover {
-        background-color: rgb(155, 193, 198); // plus foncé au survol
-        transform: scale(1.05); // Légère mise en avant au survol
+        background-color: rgb(108, 164, 172); // plus foncé 
+        transform: scale(1.20); // aggrandit au survole
       }
     }
   }
@@ -56,6 +56,6 @@ body.error404 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: rgb(252, 252, 252); // Texte par défaut en vert foncé
+  color: rgb(252, 252, 252); // Texte par défaut
 }
  

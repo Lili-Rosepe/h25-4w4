@@ -144,7 +144,6 @@ Les composants
 .erreur_404 {
   text-align: center;
   margin: 50px auto;
-  font-family: "Georgia", serif;
   color: white;
 }
 .erreur_404 h1 {
@@ -155,7 +154,7 @@ Les composants
 .erreur_404 h3 {
   font-size: 24px;
   margin-bottom: 30px;
-  color: rgb(155, 193, 198);
+  color: #fcc2f3;
 }
 .erreur_404 .bouton_acceuil {
   margin-top: 20px;
@@ -172,8 +171,8 @@ Les composants
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .erreur_404 .bouton_acceuil a:hover {
-  background-color: rgb(155, 193, 198);
-  transform: scale(1.05);
+  background-color: rgb(108, 164, 172);
+  transform: scale(1.2);
 }
 
 body.error404 {
