@@ -130,6 +130,59 @@ Les composants
   color: rgb(79, 128, 128);
 }
 
+.erreur_barre {
+  background-color: rgb(200, 244, 250);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.erreur_404 {
+  text-align: center;
+  margin: 50px auto;
+  font-family: "Georgia", serif;
+  color: white;
+}
+.erreur_404 h1 {
+  font-size: 48px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+}
+.erreur_404 h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: rgb(155, 193, 198);
+}
+.erreur_404 .bouton_acceuil {
+  margin-top: 20px;
+}
+.erreur_404 .bouton_acceuil a {
+  display: inline-block;
+  background-color: #86d6fe;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.erreur_404 .bouton_acceuil a:hover {
+  background-color: rgb(155, 193, 198);
+  transform: scale(1.05);
+}
+
+body.error404 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: rgb(252, 252, 252);
+}
+
 /* /////////////////////////////////
 Les layouts
 //////////////////////////////////// */
