@@ -1,22 +1,30 @@
 <?php get_header(); ?>
 <?php
     $erreur_404_background = get_theme_mod('erreur_404_background', '');
-    $Texte_404 = get_theme_mod('Texte_404', '');
-    $Bouton_404 = get_theme_mod('Bouton_404', '');
+    $Titre_404 = get_theme_mod('Titre_404', 'erreur404');
+    $Texte_404 = get_theme_mod('Texte_404', 'oops');
+    $Bouton_404 = get_theme_mod('Bouton_404', 'home');
 ?>
  
 <main >
-  <p class="erreur_barre erreur_barre_haut "></p>
+  
   <section class="erreur_404"  style="background-image: url('<?= $erreur_404_background ?>')">
-    <h1>Erreur 404</h1>
-
-    <h3><?= $Texte_404 ?></h3>
+    <h1><?= $Titre_404 ?></h1>
+    <div class="texte">
+      <p><?= $Texte_404 ?></p>
+    </div>
+    
     <p class="bouton_acceuil">
       <a href="<?php echo home_url(); ?>"><?= $Bouton_404 ?></a> <!-- Bouton avec lien vers l'accueil -->
     </p>
-    <?php get_template_part('gabarits/icones-social'); ?>
+    <div class="piedpage__s1__externe">
+                <?php wp_nav_menu(array(
+                    "menu" => "destination",
+                    "container" => "nav",
+                )); ?>
+            </div>
   </section>
-  <p class="erreur_barre erreur_barre_bas"></p>
+  
 </main>
  
 <?php get_footer(); ?>
