@@ -130,31 +130,33 @@ Les composants
   color: rgb(79, 128, 128);
 }
 
-.erreur_barre {
-  background-color: rgb(200, 244, 250);
-  color: rgb(255, 255, 255);
-  padding: 10px;
-  text-align: center;
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  letter-spacing: 2px;
-  margin: 0;
-}
-
 .erreur_404 {
   text-align: center;
-  margin: 50px auto;
+  width: 100%;
+  height: 4000px;
+  background-repeat: no-repeat;
   color: white;
 }
-.erreur_404 h1 {
-  font-size: 48px;
-  color: rgb(255, 255, 255);
-  margin-bottom: 20px;
+.erreur_404 .erreur_texte {
+  background-color: rgba(214, 206, 213, 0.5);
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
-.erreur_404 h3 {
+.erreur_404 .erreur_texte h3 {
   font-size: 24px;
   margin-bottom: 30px;
   color: #fcc2f3;
+}
+.erreur_404 .erreur_titre {
+  background-color: rgba(214, 206, 213, 0.5);
+  padding: 5px;
+  border-radius: 10px;
+}
+.erreur_404 .erreur_titre h1 {
+  font-size: 48px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
 }
 .erreur_404 .bouton_acceuil {
   margin-top: 20px;
@@ -176,9 +178,11 @@ Les composants
 }
 
 body.error404 {
+  width: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  align-items: center;
   color: rgb(252, 252, 252);
 }
 
@@ -213,6 +217,36 @@ Les layouts
   display: flex;
   align-items: center;
 }
+.entete__navigation .menu-toggle {
+  display: none;
+}
+.entete__navigation .menu-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}
+.entete__navigation .menu-icon .bar {
+  width: 40px;
+  height: 5px;
+  background-color: #000000;
+  border-radius: 5px;
+}
+.entete__navigation .entete__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.entete__navigation .entete__menu .menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.entete__navigation .entete__menu .menu .menu__li {
+  margin-left: 20px;
+}
 @media screen and (max-width: 800px) {
   .entete__navigation {
     position: absolute;
@@ -222,6 +256,30 @@ Les layouts
     padding: 20px;
     flex-direction: column;
     width: 100vw;
+  }
+  .entete__navigation .menu-icon {
+    display: flex;
+    align-items: flex-end;
+    max-width: 50%;
+    right: 0;
+    top: 10px;
+    position: absolute;
+  }
+  .entete__navigation .entete__menu {
+    display: none;
+    width: 100%;
+  }
+  .entete__navigation .entete__logo {
+    align-self: flex-start;
+    z-index: 99;
+    margin: 0;
+    max-width: 20%;
+  }
+  .entete__navigation .menu-toggle:checked + .menu-icon + .entete__menu {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 20px 0;
   }
 }
 .entete .custom-logo {

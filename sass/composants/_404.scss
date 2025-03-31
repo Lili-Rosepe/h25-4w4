@@ -1,33 +1,38 @@
-// Barre d'erreur
-.erreur_barre {
-  background-color:  rgb(200, 244, 250); 
-  color: rgb(255, 255, 255);
-  padding: 10px;
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-  font-size: 14px;
-  letter-spacing: 2px;
-  margin: 0;
-}
- 
+
 // Section principale de la page 404
 .erreur_404 {
   text-align: center;
-  margin: 50px auto;
+  width: 100%;
+  height: 4000px;
+  background-repeat: no-repeat;
   color: white; 
 
  //texte 
-  h1 {
-    font-size: 48px;
-    color:rgb(255, 255, 255); 
-    margin-bottom: 20px;
-  }
+ .erreur_texte{
+  background-color: rgba(214, 206, 213, 0.5); 
+  padding: 5px;
+  border-radius: 10px; 
+  margin-bottom: 30px;
+  
+ }
+ .erreur_texte h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #fcc2f3;
+}
+ .erreur_titre{
+  background-color: rgba(214, 206, 213, 0.5); 
+  padding: 5px;
+  border-radius: 10px; 
+ }
+ .erreur_titre h1 {
+  font-size: 48px;
+  color:rgb(255, 255, 255); 
+  margin-bottom: 20px;
+}
+   
  
-  h3 {
-    font-size: 24px;
-    margin-bottom: 30px;
-    color: #fcc2f3;
-  }
+  
  
   .bouton_acceuil {
     margin-top: 20px;
@@ -53,9 +58,11 @@
  
 // Ajout d'un fond pour refléter la nature
 body.error404 {
+  width: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  align-items: center;
   color: rgb(252, 252, 252); // Texte par défaut
 }
  

@@ -23,7 +23,7 @@
             </figure>
             <div class="entete__navigation">
                 <?php wp_nav_menu(array(
-                    'menu' => 'principal',
+                    'menu' => 'nav',
                     'container' => 'nav',
                     'container_class' => 'entete__menu'
                 )); ?>
@@ -31,6 +31,14 @@
                 <form class="recherche">
                 <?php get_search_form();   ?>
                 </form>
+
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+
             </div> <!-- fin entete__navigation  -->
         </div>
     </header>

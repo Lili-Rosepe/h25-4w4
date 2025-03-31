@@ -157,7 +157,18 @@ $wp_customize->add_control('Bouton_404', array(
   'section' => '404_section',
   'type' => 'text',
 ));
- 
+////////////////////Ajouter le contrôle pour la couleur
+$wp_customize->add_setting('Couleur_404', array(
+  'default' => '#FFFFFF', 
+  'sanitize_callback' => 'sanitize_hex_color', 
+));
+
+////////////////// Ajouter le contrôle pour la couleur
+$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'Couleur_404',array(
+    'label' => __('Couleur du texte', 'theme_4w4'), 
+    'section' => '404_section', 
+)));
+
 //////////////////// ajout image en background 404
 $wp_customize->add_setting('erreur_404_background', array(
   'default' => '',

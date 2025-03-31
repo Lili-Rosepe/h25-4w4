@@ -3,6 +3,41 @@
     justify-content: space-between;
     align-items: center;
     &__navigation {
+        .menu-toggle {
+            display: none;  // Cacher l'input de type checkbox
+          }
+          // Icône du hamburger
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+            padding: 10px;
+      
+            .bar {
+              width: 40px;
+              height: 5px;
+              background-color: #000000;
+              border-radius: 5px;
+            }
+          }
+          .entete__menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            .menu {
+              display: flex;
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              
+              .menu__li {
+                margin-left: 20px;
+                
+             }
+            }
+        }
         @media screen and (max-width: 800px) {
             position : absolute;
             top:0;
@@ -11,7 +46,37 @@
             padding : 20px;
             flex-direction: column; 
             width : 100vw;
+            .menu-icon {
+                display: flex;
+                align-items: flex-end;
+                max-width: 50%;
+                right: 0;
+                top: 10px;
+                position: absolute;
+                }    
+                // Menu masqué par défaut
+            .entete__menu {
+                display: none;
+                width: 100%;
+            } 
+           
+            .entete__logo {
+                align-self: flex-start;
+                z-index: 99;
+                margin: 0;
+                max-width: 20%;
+            }
+            // Si la checkbox est cochée (menu ouvert)
+            .menu-toggle:checked + .menu-icon  + .entete__menu {
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                padding: 20px 0;
+                
+                
+            }
         }
+    
         width : auto;
         position : static;
         flex-direction: row; 
@@ -29,6 +94,7 @@
     .custom-logo {
         max-width: 150px;
         height: auto;
-     }  
+    }  
+    
     
 }

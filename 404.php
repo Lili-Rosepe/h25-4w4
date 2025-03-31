@@ -4,13 +4,18 @@
     $Titre_404 = get_theme_mod('Titre_404', 'erreur404');
     $Texte_404 = get_theme_mod('Texte_404', 'oops');
     $Bouton_404 = get_theme_mod('Bouton_404', 'home');
+    $Couleur_404 = get_theme_mod('hero_couleur', '#FFFFFF'); ?>
 ?>
  
 <main >
   
   <section class="erreur_404"  style="background-image: url('<?= $erreur_404_background ?>')">
+  <div class="erreur_titre"> 
     <h1><?= $Titre_404 ?></h1>
-    <div class="texte">
+  </div>  
+ 
+
+    <div class="erreur_texte">
       <p><?= $Texte_404 ?></p>
     </div>
     
