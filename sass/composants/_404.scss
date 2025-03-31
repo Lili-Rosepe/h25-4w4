@@ -38,18 +38,45 @@
 .erreur_menu {
   margin: 40px;
   width: 100%;
+  display: flex;
+  white-space: nowrap;
+  flex-direction: row; 
+  justify-content: center; 
+  flex-wrap: wrap;
 
   a{
     color: #ffffff;
-    text-decoration: none;
     background-color: rgba(216, 168, 226, 0.555); 
     padding: 10px;
     margin: 30px;
+    width: 100%; 
     border-radius: 10px; 
     
   }
 }
 
+@media screen and (max-width: 800px){
+
+  .erreur_menu {
+    width: 100%;
+    display: flex;
+    white-space: nowrap;
+    flex-direction: row; 
+    justify-content: center; 
+    flex-wrap: wrap;
+   
+  
+    a{
+      color: #ffffff;
+    background-color: rgba(152, 89, 164, 0.555); 
+    padding: 10px;
+    margin: 30px;
+    width: 100%; 
+    border-radius: 10px;
+      
+    }
+  }
+}
  
 
   .bouton_acceuil {
@@ -75,13 +102,4 @@
   }
 }
  
-// Ajout d'un fond pour refléter la nature
-body.error404 {
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  align-items: center;
-  color: rgb(252, 252, 252); // Texte par défaut
-}
- 
+
