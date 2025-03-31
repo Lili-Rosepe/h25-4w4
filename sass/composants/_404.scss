@@ -58,23 +58,29 @@
 @media screen and (max-width: 800px){
 
   .erreur_menu {
-    width: 100%;
-    display: flex;
-    white-space: nowrap;
-    flex-direction: row; 
-    justify-content: center; 
-    flex-wrap: wrap;
+   
+      margin: 0px;
+      justify-content: center; 
    
   
     a{
-      color: #ffffff;
+    color: #ffffff;
     background-color: rgba(152, 89, 164, 0.555); 
-    padding: 10px;
-    margin: 30px;
-    width: 100%; 
+    padding: 5px;
+    margin: 25px;
+    width: 48%;
     border-radius: 10px;
       
     }
+    & .menu { //ul
+      display : flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 10px;
+      
+      
+      
+  }
   }
 }
  

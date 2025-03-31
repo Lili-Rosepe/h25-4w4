@@ -3,15 +3,18 @@
     display : flex;
     @media screen and (max-width: 800px) {
     flex-direction: column;
+    justify-content: center;
+    
+  
     }
     flex-direction: row;
     list-style-type: none;
-    gap : 10px 0;
+    gap : 15px 0;
     &-item{ // li
  
        a { //a
         text-decoration : none;
-        padding : 4px;
+        padding : 5px;
        } 
     }
 }

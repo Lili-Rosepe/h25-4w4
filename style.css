@@ -62,16 +62,17 @@ Les composants
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  gap: 10px 0;
+  gap: 15px 0;
 }
 @media screen and (max-width: 800px) {
   .menu {
     flex-direction: column;
+    justify-content: center;
   }
 }
 .menu-item a {
   text-decoration: none;
-  padding: 4px;
+  padding: 5px;
 }
 
 .recherche {
@@ -180,20 +181,22 @@ Les composants
 }
 @media screen and (max-width: 800px) {
   .erreur_404 .erreur_menu {
-    width: 100%;
-    display: flex;
-    white-space: nowrap;
-    flex-direction: row;
+    margin: 0px;
     justify-content: center;
-    flex-wrap: wrap;
   }
   .erreur_404 .erreur_menu a {
     color: #ffffff;
     background-color: rgba(152, 89, 164, 0.555);
-    padding: 10px;
-    margin: 30px;
-    width: 100%;
+    padding: 5px;
+    margin: 25px;
+    width: 48%;
     border-radius: 10px;
+  }
+  .erreur_404 .erreur_menu .menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
   }
 }
 .erreur_404 .bouton_acceuil {
