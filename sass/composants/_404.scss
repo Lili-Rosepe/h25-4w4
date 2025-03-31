@@ -2,49 +2,68 @@
 // Section principale de la page 404
 .erreur_404 {
   text-align: center;
-  width: 100%;
-  height: 4000px;
+  height: 1000px;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
   color: white; 
+  margin: 5px;
 
  //texte 
  .erreur_texte{
   background-color: rgba(214, 206, 213, 0.5); 
   padding: 5px;
   border-radius: 10px; 
-  margin-bottom: 30px;
+  margin: 30px;
   
  }
  .erreur_texte h3 {
   font-size: 24px;
-  margin-bottom: 30px;
   color: #fcc2f3;
 }
  .erreur_titre{
   background-color: rgba(214, 206, 213, 0.5); 
   padding: 5px;
+  margin: 30px;
   border-radius: 10px; 
  }
  .erreur_titre h1 {
   font-size: 48px;
   color:rgb(255, 255, 255); 
-  margin-bottom: 20px;
+ 
 }
    
+.erreur_menu {
+  margin: 40px;
+  width: 100%;
+
+  a{
+    color: #ffffff;
+    text-decoration: none;
+    background-color: rgba(216, 168, 226, 0.555); 
+    padding: 10px;
+    margin: 30px;
+    border-radius: 10px; 
+    
+  }
+}
+
  
-  
- 
+
   .bouton_acceuil {
-    margin-top: 20px;
+    margin-top: 40px;
+
  
     a {
       display: inline-block;
       background-color: #86d6fe; 
       color: white;
       text-decoration: none;
-      padding: 10px 20px;
+      padding: 15px 25px;
       border-radius: 5px;
-      font-size: 16px;
+      font-size: 20px;
       font-family: 'Arial', sans-serif;
       transition: background-color 0.3s ease, transform 0.2s ease;
  

@@ -5,7 +5,6 @@
     $Texte_404 = get_theme_mod('Texte_404', 'oops');
     $Bouton_404 = get_theme_mod('Bouton_404', 'home');
     $Couleur_404 = get_theme_mod('hero_couleur', '#FFFFFF'); ?>
-?>
  
 <main >
   
@@ -22,7 +21,7 @@
     <p class="bouton_acceuil">
       <a href="<?php echo home_url(); ?>"><?= $Bouton_404 ?></a> <!-- Bouton avec lien vers l'accueil -->
     </p>
-    <div class="piedpage__s1__externe">
+    <div class="erreur_menu">
                 <?php wp_nav_menu(array(
                     "menu" => "destination",
                     "container" => "nav",
