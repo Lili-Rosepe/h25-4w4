@@ -218,6 +218,39 @@ Les composants
   transform: scale(1.2);
 }
 
+/**
+bouton-categorie.scss ------------------------------ .categorie__ul
+*/
+.categorie__ul {
+  display: flex;
+  gap: 10px;
+  list-style-type: none; /* Suppression des puces */
+  padding: 0; /* Retirer la marge par défaut des ul */
+  margin: 0; /* Retirer la marge par défaut des ul */
+  /* Cacher les inputs radio (les boutons radio eux-mêmes) */
+  /* Afficher les articles sous forme d'accordéon */
+  /* Afficher l'accordéon lorsque le bouton radio est sélectionné */
+}
+.categorie__ul__li {
+  padding: 10px 20px; /* Espacement autour du texte */
+  border: 2px solid rgb(200, 244, 250); /* Bordure claire */
+  background-color: rgb(253, 235, 255); /* Fond légèrement violet */
+  color: rgb(50, 50, 50); /* Couleur du texte */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Changer le curseur quand on survole le bouton */
+  transition: background-color 0.3s, border-color 0.3s; /* Transition fluide */
+}
+.categorie__ul .category-radio {
+  display: none;
+}
+.categorie__ul .destinations__list {
+  display: none;
+  margin-top: 20px;
+}
+.categorie__ul input[type=radio]:checked ~ .destinations__list {
+  display: block;
+}
+
 /* /////////////////////////////////
 Les layouts
 //////////////////////////////////// */
@@ -320,11 +353,21 @@ Les layouts
 }
 
 .hero {
-  background-image: url("images/maldives.jpg");
   background-repeat: no-repeat;
+  position: relative;
   min-height: 100vh;
   color: aliceblue;
   background-size: cover;
+}
+.hero__caroussel {
+  position: absolute;
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  z-index: -1;
+}
+.hero__contenu {
+  z-index: 9;
 }
 
 /*

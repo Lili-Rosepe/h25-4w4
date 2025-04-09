@@ -3,14 +3,40 @@ bouton-categorie.scss ------------------------------ .categorie__ul
 */
 
 
-.categorie__ul{
-    display : flex;
-    gap: 5px;
-    list-style-type: none;
-&__li{
-    padding: 3px;
-    border: 1px solid #aaa;
-    background-color: aquamarine;
+.categorie__ul {
+    display: flex;
+    gap: 10px;
+    list-style-type: none; /* Suppression des puces */
+    padding: 0; /* Retirer la marge par défaut des ul */
+    margin: 0; /* Retirer la marge par défaut des ul */
+    &__li {
+        padding: 10px 20px; /* Espacement autour du texte */
+        border: 2px solid rgb(200, 244, 250); /* Bordure claire */
+        background-color: rgb(253, 235, 255); /* Fond légèrement violet */
+        color: rgb(50, 50, 50); /* Couleur du texte */
+        border-radius: 5px; /* Coins arrondis */
+        cursor: pointer; /* Changer le curseur quand on survole le bouton */
+        transition: background-color 0.3s, border-color 0.3s; /* Transition fluide */
+    }
+    /* Cacher les inputs radio (les boutons radio eux-mêmes) */
+.category-radio {
+    display: none;
 }
 
+/* Afficher les articles sous forme d'accordéon */
+.destinations__list {
+    display: none;
+    margin-top: 20px;
 }
+
+/* Afficher l'accordéon lorsque le bouton radio est sélectionné */
+input[type="radio"]:checked ~ .destinations__list {
+    display: block;
+}
+
+
+
+}
+
+
+

@@ -5,7 +5,7 @@
      $hero_email = get_theme_mod('hero_email', 'Default Title');
      $hero_adresse = get_theme_mod('hero_adresse', 'Sherbrooke MTL');
      $hero_couleur = get_theme_mod('hero_couleur', '#FFFFFF'); 
-    for ($k; $k<3; $k++){
+    for ($k=0; $k<3; $k++){
     $hero_background[$k] = get_theme_mod('hero_background'. $k, ''); 
     }
   ?>

@@ -47,7 +47,7 @@ wp_enqueue_script(
   get_template_directory_uri() . '/js/caroussel.js',
   array(),
   filemtime(get_template_directory() . 
-  '/js/destination.js'),
+  '/js/caroussel.js'),
   true
 );
 } 

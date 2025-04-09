@@ -3,10 +3,8 @@
  */
 (function(){
     console.log("destination.js")
-    const categoryId = 3; // Remplacez par l'ID de la catégorie souhaitée
+    let categoryId = 3; // Remplacez par l'ID de la catégorie souhaitée
     const domaine = window.location.href
-    const apiUrl = `${domaine}wp-json/wp/v2/posts?categories=${categoryId}`;
-    console.log(apiUrl)
     parcourir_bouton()
 
 function parcourir_bouton(){
@@ -16,27 +14,37 @@ function parcourir_bouton(){
         elm.addEventListener('mousedown', function(){
             console.log(elm.tagName)
             console.log("elm.dataset.category_id = " , elm.dataset.category_id)
+            categoryId = elm.dataset.category_id
+            mon_fetch(categoryId)
         })
     })
 
 }
 
-
+function mon_fetch(categoryId){
+    let apiUrl = `${domaine}wp-json/wp/v2/posts?categories=${categoryId}`;
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            const destinationList = document.querySelector('.destination__list');
+            const destinationsList = document.querySelector('.destinations__list');
+            destinationsList.innerHTML = "";
             data.forEach(article => {
                 const articleElement = document.createElement('div');
                 console.log(article.title.rendered)
                 // <div>${article.excerpt.rendered}</div>
                 articleElement.innerHTML = `
                     <h3>${article.title.rendered}</h3>
+                    <label for="rad_${categoryId}">...</label>
                     <p>${article.excerpt.rendered}</p>
                     <a href="${article.link}">Lire plus</a>
                 `;
-                destinationList .appendChild(articleElement);
+                destinationsList.appendChild(articleElement);
+
+               
+
             });
         })
         .catch(error => console.error('Erreur lors de la récupération des articles:', error));
+    }
+
     })()
