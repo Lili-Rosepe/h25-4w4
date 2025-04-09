@@ -65,16 +65,19 @@ $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'hero_co
 )));
 
 /////////////// ajout de la données image en background
-$wp_customize->add_setting('hero_background', array(
+for($k = 0; $k<3; $k++){
+$wp_customize->add_setting('hero_background'.$k , array(
   'default' => '',
   'sanitize_callback' => 'esc_url_raw',
 ));
+
 //////////// ajout du contrôle de la donnée background
-$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background', array(
+
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background'.$k , array(
   'label' => __('Image en arrière plan', 'theme_4w4'),
   'section' => 'hero_section',
 )));
-
+}
 
 //////////////////////////////////////////////////////SECTION FOOTER ////////////////////////////////////////////////////////
 $wp_customize->add_section('footer_section', array(
