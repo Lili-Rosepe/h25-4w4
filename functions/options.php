@@ -20,6 +20,7 @@ function mon_theme_supports() {
   add_theme_support('title-tag');
   add_theme_support('menus');
   add_theme_support('post-thumbnails');
+  add_image_size('logo', 75, 75, true);
   add_theme_support('custom-logo', array(
     'height'      => 250,
     'width'       => 250,
@@ -43,11 +44,11 @@ wp_enqueue_script(
   true
 );
 wp_enqueue_script(
-  'caroussel',
-  get_template_directory_uri() . '/js/caroussel.js',
+  'carrousel',
+  get_template_directory_uri() . '/js/carrousel.js',
   array(),
   filemtime(get_template_directory() . 
-  '/js/caroussel.js'),
+  '/js/carrousel.js'),
   true
 );
 } 

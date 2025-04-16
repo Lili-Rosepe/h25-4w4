@@ -65,6 +65,7 @@ $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'hero_co
 )));
 
 /////////////// ajout de la données image en background
+// $nb_image = get_theme_mod('nb_image', 1); 
 for($k = 0; $k<3; $k++){
 $wp_customize->add_setting('hero_background'.$k , array(
   'default' => '',
