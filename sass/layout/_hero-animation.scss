@@ -1,0 +1,19 @@
+.hero-titre, .hero_description{
+  animation: contenue linear 1s forwards;
+  
+}
+
+.hero_titre{
+  transform: translateY(-1000px);
+}
+
+.hero_description{
+  transform: translateX(-1000px);
+  animation-delay: 1s;
+}
+
+@keyframes contenue{
+  100%{
+    transform: translate(0,0);
+  }
+}

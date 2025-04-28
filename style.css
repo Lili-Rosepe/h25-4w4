@@ -251,6 +251,10 @@ bouton-categorie.scss ------------------------------ .categorie__ul
   display: block;
 }
 
+.vague {
+  position: relative;
+}
+
 /* /////////////////////////////////
 Les layouts
 //////////////////////////////////// */
@@ -422,4 +426,23 @@ footer {
 }
 .piedpage__s1__icone {
   flex: 1 0 25%;
+}
+
+.hero-titre, .hero_description {
+  animation: contenue linear 1s forwards;
+}
+
+.hero_titre {
+  transform: translateY(-1000px);
+}
+
+.hero_description {
+  transform: translateX(-1000px);
+  animation-delay: 1s;
+}
+
+@keyframes contenue {
+  100% {
+    transform: translate(0, 0);
+  }
 }/*# sourceMappingURL=style.css.map */
