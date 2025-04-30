@@ -20,11 +20,28 @@
       <input class="hero__radio__input" date-id_radio= "2" type="radio" name="carrousel">
 
     </div>
-      <div class="hero__contenu global">       
-        <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
-        <p class="hero__description">
-        <?php bloginfo('description'); ?>
-        </p>
+      <div class="hero__contenu global">  
+        <div class="hero__animation--active">     
+
+          <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
+          <p class="hero__description"><?php bloginfo('description'); ?>
+          </p>
+
+        </div>
+
+        <div class="hero__animation">     
+          <h1 class="hero__titre">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda provident tempora reprehenderit? Cumque aliquid cum fugit qui!</h1>
+          <p class="hero__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis cupiditate ratione quasi amet cum beatae excepturi
+          </p>
+
+        </div>
+        <div class="hero__animation">     
+          <h1 class="hero__titre">fugit qui!</h1>
+          <p class="hero__description">zzzzzzzzz
+          </p>
+
+        </div>
+        
         <p class="hero__courriel">
         <?php echo $hero_email; ?>
         </p>

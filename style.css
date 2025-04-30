@@ -357,7 +357,6 @@ Les layouts
 }
 
 .hero {
-  background-repeat: no-repeat;
   position: relative;
   min-height: 100vh;
   color: aliceblue;
@@ -365,6 +364,7 @@ Les layouts
 }
 .hero__carrousel {
   position: absolute;
+  background-repeat: no-repeat;
   min-height: 100vh;
   width: 100%;
   background-position: center;
@@ -428,17 +428,23 @@ footer {
   flex: 1 0 25%;
 }
 
-.hero-titre, .hero_description {
+.hero__animation {
+  display: none;
+}
+.hero__animation--active {
+  display: block;
+}
+.hero__animation--active .hero__titre, .hero__animation--active .hero__description {
   animation: contenue linear 1s forwards;
 }
 
-.hero_titre {
+.hero__titre {
   transform: translateY(-1000px);
 }
 
-.hero_description {
+.hero__description {
   transform: translateX(-1000px);
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 
 @keyframes contenue {

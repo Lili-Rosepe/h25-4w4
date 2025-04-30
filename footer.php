@@ -1,7 +1,10 @@
 <footer>
     <?php $footer_adresse  = get_theme_mod('footer_adresse', 'Default Title');  ?>
     <?php $footer_telephone  = get_theme_mod('footer_telephone', 'Default Title');  ?>
-    <?php $footer_mission  = get_theme_mod('footer_mission', 'Default Title');  ?>
+    <?php $footer_mission  = get_theme_mod('footer_mission', 'Default Title'); ?> 
+   <?php $footer_couleur = get_theme_mod('footer_couleur','#c8f4fa');
+    genere_vague($footer_couleur);
+    ?>
     <div class="piedpage global">
         <section class="piedpage__s1">
            <div class="piedpage__s1__liens">

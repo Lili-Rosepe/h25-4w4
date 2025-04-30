@@ -8,6 +8,7 @@ for(hero__radio__input_bouton of hero__radio__input){
 }
 
 function updateCarrousel(event){
+  
   let numero = event.target.getAttribute("date-id_radio");
   let backgrounds=document.querySelectorAll(".hero__carrousel");
   console.log(backgrounds);
@@ -16,8 +17,6 @@ function updateCarrousel(event){
     unBackground.classList.remove("active");
   }
   backgrounds[numero].classList.add("active");
-
-  
 
 
 }
@@ -42,6 +41,14 @@ function changeSlide(index) {
 
   // Ajoute la classe "active" à l'élément correspondant
   backgrounds[index].classList.add("active");
+}
+function parcourir_carrousel(){
+  hero__carrousel.forEach(element => {
+      element.classList.remove("hero__carrousel--active")
+  });
+}
+function parcouir_animation(){
+
 }
 
 })()

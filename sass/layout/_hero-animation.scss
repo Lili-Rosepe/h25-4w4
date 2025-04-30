@@ -1,15 +1,27 @@
-.hero-titre, .hero_description{
-  animation: contenue linear 1s forwards;
-  
+// animation de la secton hero
+// reference : 
+.hero__animation{
+  display: none;
+    &--active{
+      display: block;
+
+      .hero__titre, .hero__description{
+        animation: contenue linear  1s forwards;
+        
+      }
+      
+
+    }
 }
 
-.hero_titre{
+
+.hero__titre{
   transform: translateY(-1000px);
 }
 
-.hero_description{
+.hero__description{
   transform: translateX(-1000px);
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 
 @keyframes contenue{
