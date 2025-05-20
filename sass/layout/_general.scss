@@ -12,3 +12,10 @@
     display: flex;
     flex-wrap: wrap;
 }
+.carte {
+    transition: transform 0.3s ease; // transition fluide
+  
+    &:hover {
+      transform: scale(1.05); // agrandissement léger
+    }
+  }

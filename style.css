@@ -106,6 +106,10 @@ Les composants
   justify-content: space-between;
   gap: 3rem;
   background-color: rgb(200, 244, 250);
+  transition: transform 0.3s ease;
+}
+.carte:hover {
+  transform: scale(1.05);
 }
 .carte--grande {
   flex: 1 1 30%;
@@ -239,6 +243,10 @@ bouton-categorie.scss ------------------------------ .categorie__ul
   border-radius: 5px; /* Coins arrondis */
   cursor: pointer; /* Changer le curseur quand on survole le bouton */
   transition: background-color 0.3s, border-color 0.3s; /* Transition fluide */
+  transition: transform 0.3s ease;
+}
+.categorie__ul__li:hover {
+  transform: scale(1.05);
 }
 .categorie__ul .category-radio {
   display: none;
@@ -253,6 +261,17 @@ bouton-categorie.scss ------------------------------ .categorie__ul
 
 .vague {
   position: relative;
+}
+
+h3 .chk__acordeon:checked ~ .description {
+  max-height: 50px;
+  padding: 5px;
+}
+
+.description {
+  max-height: 0px;
+  transition: max-height 1s;
+  overflow: hidden;
 }
 
 /* /////////////////////////////////
@@ -271,6 +290,13 @@ Les layouts
 .populaire .global {
   display: flex;
   flex-wrap: wrap;
+}
+
+.carte {
+  transition: transform 0.3s ease;
+}
+.carte:hover {
+  transform: scale(1.05);
 }
 
 .entete {
@@ -370,6 +396,7 @@ Les layouts
   background-position: center;
   z-index: -1;
   opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 .hero__carrousel.active {
   opacity: 1;
@@ -431,11 +458,12 @@ footer {
 .hero__animation {
   display: none;
 }
-.hero__animation--active {
+.hero__animation.active {
   display: block;
 }
-.hero__animation--active .hero__titre, .hero__animation--active .hero__description {
-  animation: contenue linear 1s forwards;
+.hero__animation.active .hero__titre, .hero__animation.active .hero__description {
+  animation: contenu linear 1s forwards;
+  position: relative;
 }
 
 .hero__titre {

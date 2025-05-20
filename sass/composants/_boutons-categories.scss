@@ -9,6 +9,7 @@ bouton-categorie.scss ------------------------------ .categorie__ul
     list-style-type: none; /* Suppression des puces */
     padding: 0; /* Retirer la marge par défaut des ul */
     margin: 0; /* Retirer la marge par défaut des ul */
+   
     &__li {
         padding: 10px 20px; /* Espacement autour du texte */
         border: 2px solid rgb(200, 244, 250); /* Bordure claire */
@@ -17,6 +18,11 @@ bouton-categorie.scss ------------------------------ .categorie__ul
         border-radius: 5px; /* Coins arrondis */
         cursor: pointer; /* Changer le curseur quand on survole le bouton */
         transition: background-color 0.3s, border-color 0.3s; /* Transition fluide */
+        transition: transform 0.3s ease; // transition fluide
+  
+        &:hover {
+          transform: scale(1.05); // agrandissement léger
+        }
     }
     /* Cacher les inputs radio (les boutons radio eux-mêmes) */
 .category-radio {

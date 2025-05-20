@@ -1,0 +1,13 @@
+h3 .chk__acordeon:checked ~ .description{
+
+  max-height: 50px;
+  padding: 5px;
+  
+}
+.description{
+    
+  max-height: 0px;
+  transition: max-height 1s;
+  overflow: hidden;
+
+}

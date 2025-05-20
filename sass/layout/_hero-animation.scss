@@ -2,11 +2,12 @@
 // reference : 
 .hero__animation{
   display: none;
-    &--active{
+    &.active{
       display: block;
 
       .hero__titre, .hero__description{
-        animation: contenue linear  1s forwards;
+        animation: contenu linear  1s forwards;
+        position : relative;
         
       }
       

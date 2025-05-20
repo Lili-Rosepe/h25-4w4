@@ -71,6 +71,36 @@ $wp_customize->add_setting('hero_background'.$k , array(
   'default' => '',
   'sanitize_callback' => 'esc_url_raw',
 ));
+// Ajouter un setting pour définir le nombre d'images
+$wp_customize->add_setting('nb_image', array(
+  'default' => 1,
+  'sanitize_callback' => 'absint',
+));
+
+// Ajouter le contrôle (input number)
+$wp_customize->add_control('nb_image', array(
+  'label' => __('Nombre d\'images dans le carrousel', 'theme_4w4'),
+  'section' => 'hero_section',
+  'type' => 'number',
+  'input_attrs' => array(
+      'min' => 1,
+      'max' => 10
+  ),
+));
+$nb_image = get_theme_mod('nb_image', 1); // Récupère la valeur définie
+
+for($k = 0; $k < $nb_image; $k++) {
+    $wp_customize->add_setting('hero_background'.$k , array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background'.$k , array(
+        'label' => sprintf(__('Image en arrière plan #%d', 'theme_4w4'), $k + 1),
+        'section' => 'hero_section',
+    )));
+}
+
 
 //////////// ajout du contrôle de la donnée background
 

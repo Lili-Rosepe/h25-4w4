@@ -21,7 +21,7 @@
 
     </div>
       <div class="hero__contenu global">  
-        <div class="hero__animation--active">     
+        <div class="hero__animation active">     
 
           <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
           <p class="hero__description"><?php bloginfo('description'); ?>

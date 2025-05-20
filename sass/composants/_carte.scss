@@ -5,6 +5,11 @@
     justify-content: space-between;
     gap: 3rem;
     background-color: rgb(200, 244, 250); 
+    transition: transform 0.3s ease; // transition fluide
+  
+    &:hover {
+      transform: scale(1.05); // agrandissement léger
+    }
 
     
    &--grande{

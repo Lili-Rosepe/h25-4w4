@@ -5,7 +5,7 @@
     min-height: 100vh;
     color: aliceblue;
     background-size: cover;
-    &__carrousel{
+    &__carrousel {
         position: absolute;
         background-repeat: no-repeat;
         min-height: 100vh;
@@ -13,10 +13,11 @@
         background-position: center;
         z-index: -1;
         opacity: 0;
-       &.active{
+        transition: opacity 0.5s ease-in-out; // <- transition ajoutée
+    
+        &.active {
             opacity: 1;
         }
-            
     }
 
    
