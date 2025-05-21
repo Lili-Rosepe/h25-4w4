@@ -3,9 +3,11 @@
     <?php $footer_telephone  = get_theme_mod('footer_telephone', 'Default Title');  ?>
     <?php $footer_mission  = get_theme_mod('footer_mission', 'Default Title'); ?> 
    <?php $footer_couleur = get_theme_mod('footer_couleur','#c8f4fa');
+    $footer_image = get_theme_mod('footer_image', '');
     genere_vague($footer_couleur);
     ?>
     <div class="piedpage global">
+    <div class="piedpage__s1__image"><?php echo $footer_image; ?></div>
         <section class="piedpage__s1">
            <div class="piedpage__s1__liens">
             <h4>Liens sur le voyages</h4>

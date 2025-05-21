@@ -148,6 +148,18 @@ $wp_customize->add_control('footer_mission', array(
   'section' => 'footer_section',
   'type' => 'text',
 ));
+//////////////////// ajout image en background 404
+$wp_customize->add_setting('footer_image', array(
+  'default' => '',
+  'sanitize_callback' => 'esc_url_raw',
+));
+//////////////////// ajout image en background 404
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'footer_image', array(
+  'label' => __('footer_image', 'theme_4w4'),
+  'section' => 'footer_section',
+)));
+
+
 // ///////////////////////////////////////  EREUR 404 ///////////////////////////////////////////
 
 $wp_customize->add_section('404_section', array(
