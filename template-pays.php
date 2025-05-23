@@ -29,10 +29,10 @@ get_header(); ?>
 </section>
         <!-- ////////////////////////////////////////////////  section rest-api -->
         «
-        <section class="destinations">
-        <?php categories_liste("destinations") ?>
-        <h2 class="destinations__titre">Articles de la catégorie</h2>
-        <div class="destinations__list"></div>
+        <section class="pays">
+        <?php categories_liste("pays") ?>
+        <h2 class="pays__titre">Articles de la catégorie</h2>
+        
         </section>
     </div>
 </section>

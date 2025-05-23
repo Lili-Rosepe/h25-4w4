@@ -5,9 +5,22 @@
     console.log("destination.js")
     let categoryId = 3; // Remplacez par l'ID de la catégorie souhaitée
     let mode = "categories"; // ou "search"
-    const domaine = window.location.origin + "/";
+    const domaine = window.location.origin ;
     parcourir_bouton()
     mon_fetch(categoryId)
+    if (selectPays) {
+        selectPays.addEventListener('change', function(){
+            const selected = selectPays.value;
+            if (isNaN(parseInt(selected))) {
+                mode = "search";
+                categoryId = selected;
+            } else {
+                mode = "categories";
+                categoryId = selected;
+            }
+            mon_fetch(categoryId);
+        });
+    }
 
    
 
