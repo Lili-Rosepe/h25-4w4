@@ -48,7 +48,7 @@
                     "container" => "nav",
                 )); ?>
             </div>
-
+                <p>Lien git: <a href="https://github.com/Lili-Rosepe/h25-4w4">Lien GitHub</a></p>
         </section>
         <section class="piedpage__s2"></section>
         <section class="piedpage__s3"></section>
