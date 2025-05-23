@@ -225,5 +225,62 @@ $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'erreur
   'label' => __('Erreur 404 Background Image', 'theme_4w4'),
   'section' => '404_section',
 )));
+// ///////////////////////////////////////  PAGE PAYS///////////////////////////////////////////
+$wp_customize->add_section('pays_section', array(
+  'title' => __('Section 404', 'theme_4w4'),
+  'priority' => 30,
+));
+//////////////////////////////// ajout text Titre 
+$wp_customize->add_setting('pays_titre', array(
+  'default' => __('France', 'theme_4w4'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+ 
+//////////////////////////////// ajout de la donné du Titre 
+$wp_customize->add_control('pays_titre', array(
+  'label' => __('Titre', 'theme_4w4'),
+  'section' => 'pays_section',
+  'type' => 'text',
+));
+//////////////////////////////// ajout text description 
+$wp_customize->add_setting('pays_descriptions', array(
+  'default' => __('Voyage en france', 'theme_4w4'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+ 
+//////////////////////////////// ajout de la donné du text description 
+$wp_customize->add_control('pays_descriptions', array(
+  'label' => __('Desciption', 'theme_4w4'),
+  'section' => 'pays_section',
+  'type' => 'text',
+));
+ //////////////////////////////// ajout text heure 
+$wp_customize->add_setting('pays_heure', array(
+  'default' => __('heure', 'theme_4w4'),
+  'sanitize_callback' => 'sanitize_text_field'
+));
+ 
+//////////////////////////////// ajout de la donné du text heure 
+$wp_customize->add_control('pays_heure', array(
+  'label' => __('Heure', 'theme_4w4'),
+  'section' => 'pays_section',
+  'type' => 'text',
+));
+//////////////////// ajout image en background 404
+$wp_customize->add_setting('pays_image', array(
+  'default' => '',
+  'sanitize_callback' => 'esc_url_raw',
+));
+//////////////////// ajout image en background 404
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'pays_image', array(
+  'label' => __('pays_image', 'theme_4w4'),
+  'section' => 'pays_sedction',
+)));
+
 }
+
+
+
+
+
  ?>

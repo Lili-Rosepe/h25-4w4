@@ -3,10 +3,19 @@
  * Template Name: Pays
  */
 get_header(); ?>
+    <?php $pays_titre  = get_theme_mod('pays_titre', 'Default Title');  ?>
+    <?php $pays_heure  = get_theme_mod('pays_heure', 'Default Title');  ?>
+    <?php $pays_descriptions  = get_theme_mod('pays_descriptions', 'Default Title'); ?> 
+    <?php $footer_image = get_theme_mod('footer_image', '');?>
   <section class="contenu__pays">
 
     <h1>Les plus beau Pays</h1>
     <p>Plongez au cœur de l’aventure et laissez-vous emporter par l’appel du large ! Notre planète regorge de destinations incroyables, chacune promettant une expérience unique et mémorable. Que vous rêviez de plages idylliques baignées de soleil, de sommets majestueux invitant à la randonnée, de villes vibrantes d’histoire et de modernité, ou de rencontres culturelles authentiques, il y a un pays fait pour vous.</p>
+    <p><?php echo $pays_titre; ?></p>
+    
+    <p><?php echo $pays_heure; ?></p>
+    <p><?php echo $pays_descriptions; ?></p>
+    
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <?php the_content(); ?>
 <?php endwhile; endif; ?>
