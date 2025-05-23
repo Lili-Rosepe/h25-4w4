@@ -3,9 +3,9 @@
  */
 (function(){
     console.log("destination.js")
-    let categoryId = 3; // Remplacez par l'ID de la catégorie souhaitée
+    let categoryId = 3 || france; // Remplacez par l'ID de la catégorie souhaitée
     let mode = "categories"; // ou "search"
-    const domaine = window.location.origin ;
+    const domaine = document.querySelector('base').getAttribute('href')
     parcourir_bouton()
     mon_fetch(categoryId)
     if (selectPays) {
@@ -41,7 +41,7 @@ function parcourir_bouton(){
 }
 
 function mon_fetch(categoryId){
-    let apiUrl = `${domaine}wp-json/wp/v2/posts?categories=${categoryId}`;
+    apiUrl = `${domaine}/wp-json/wp/v2/posts?categories=${categoryId}`;
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
