@@ -1,0 +1,12 @@
+.contenu__pays{
+  display : flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 15px;
+  
+}
+
+.accordion {
+  
+  transition: max-height 0.4s ease;
+}

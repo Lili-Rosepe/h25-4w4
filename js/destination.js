@@ -4,9 +4,13 @@
 (function(){
     console.log("destination.js")
     let categoryId = 3; // Remplacez par l'ID de la catégorie souhaitée
-    const domaine = window.location.href
+    let mode = "categories"; // ou "search"
+    const domaine = window.location.origin + "/";
     parcourir_bouton()
-    
+    mon_fetch(categoryId)
+
+   
+
 
 function parcourir_bouton(){
     const categorie__ul__li = document.querySelectorAll(".categorie__ul__li")
